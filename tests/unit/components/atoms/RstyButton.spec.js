@@ -47,7 +47,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('aria-pressed')).not.toBeDefined()
     expect(wrapper.attributes('autocomplete')).not.toBeDefined()
     expect(wrapper.attributes('tabindex')).not.toBeDefined()
-
     expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
@@ -66,7 +65,47 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('type')).toBe('button')
     expect(wrapper.find('span').exists()).toBe(true)
     expect(wrapper.text()).toBe('foobar')
+    expect(wrapper).toMatchSnapshot()
 
+    wrapper.destroy()
+  })
+
+  it('button has attribute disabled when disabled set', async () => {
+    const props = {
+      disabled: true,
+    }
+    const wrapper = factory({ props })
+
+    expect(wrapper.element.tagName).toBe('BUTTON')
+    expect(wrapper.attributes('type')).toBe('button')
+    expect(wrapper).toMatchSnapshot()
+
+    wrapper.destroy()
+  })
+
+  it('link with href="#" should have role="button"', async () => {
+    const props = {
+      href: '#',
+    }
+    const wrapper = factory({ props })
+
+    expect(wrapper.element.tagName).toBe('A')
+    expect(wrapper.classes()).not.toContain('disabled')
+    expect(wrapper.attributes('role')).toEqual('button')
+    expect(wrapper).toMatchSnapshot()
+
+    wrapper.destroy()
+  })
+  it('link disabled should have href="#" and role="button"', async () => {
+    const props = {
+      href: '#',
+    }
+    const wrapper = factory({ props })
+
+    expect(wrapper.element.tagName).toBe('A')
+    expect(wrapper.classes()).not.toContain('disabled')
+    expect(wrapper.attributes('role')).toEqual('button')
+    expect(wrapper.attributes('href')).toEqual('#')
     expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()

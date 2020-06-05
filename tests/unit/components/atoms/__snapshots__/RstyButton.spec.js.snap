@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RstyButton.vue button has attribute disabled when disabled set 1`] = `<button type="button" disabled="disabled" class=""></button>`;
+
 exports[`RstyButton.vue has default structure and classes 1`] = `<button type="button" class=""></button>`;
+
+exports[`RstyButton.vue link disabled should have href="#" and role="button" 1`] = `<a href="#" role="button" class=""></a>`;
+
+exports[`RstyButton.vue link with href="#" should have role="button" 1`] = `<a href="#" role="button" class=""></a>`;
 
 exports[`RstyButton.vue renders a link when href provided 1`] = `<a href="/foo/bar" class=""></a>`;
 
