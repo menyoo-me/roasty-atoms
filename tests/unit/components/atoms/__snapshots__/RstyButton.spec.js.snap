@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RstyButton.vue has default structure and classes 1`] = `<button type="button" class=""></button>`;
+
+exports[`RstyButton.vue renders a link when href provided 1`] = `<a href="/foo/bar" class=""></a>`;
+
+exports[`RstyButton.vue renders default slot content 1`] = `<button type="button" class=""><span>foobar</span></button>`;
+
+exports[`RstyButton.vue toMatchSnapshot 1`] = `<button type="button" class=""></button>`;
