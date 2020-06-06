@@ -2,6 +2,8 @@
 
 Roasty is a Menyoo Design System based on Atomic Design and utility-first-css
 
+[![Coverage Status](https://coveralls.io/repos/github/menyoo-me/roasty-atoms/badge.svg?branch=master)](https://coveralls.io/github/menyoo-me/roasty-atoms?branch=master)
+
 ## Project setup
 
 ```

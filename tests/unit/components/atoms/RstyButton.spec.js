@@ -112,4 +112,34 @@ describe('RstyButton.vue', () => {
 
     wrapper.destroy()
   })
+
+  it('validate type props', async () => {
+    const props = {
+      type: 'button',
+    }
+    const wrapper = factory({ props })
+    expect(wrapper.props().type).toBe('button')
+    wrapper.destroy()
+  })
+
+  it('validate blockClasses', async () => {
+    const props = {
+      block: true,
+    }
+    const wrapper = factory({ props })
+
+    expect(wrapper.classes()).toContain('flex')
+    expect(wrapper.classes()).toContain('justify-center')
+    expect(wrapper.classes()).toContain('w-full')
+
+    wrapper.destroy()
+  })
+
+  it('validate blockClasses false', async () => {
+    const wrapper = factory()
+
+    expect(wrapper.classes()).toContain('inline-flex')
+
+    wrapper.destroy()
+  })
 })
