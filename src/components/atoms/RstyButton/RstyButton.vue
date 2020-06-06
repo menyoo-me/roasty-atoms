@@ -63,5 +63,64 @@ export default {
       default: false,
     },
   },
+  data: () => ({
+    baseClass: [
+      'button',
+      'outline-none',
+      'active:outline-none',
+      'focus:outline-none',
+      'py-2',
+      'px-3',
+      'border',
+      'rounded',
+      'items-center',
+      'font-bold',
+      'transition',
+      'duration-50',
+      'ease-in-out',
+      'transform',
+      'active:scale-98',
+    ],
+    buttonVariationClasses: {
+      disabled: [
+        'bg-gray-200',
+        'border-gray-300',
+        'text-gray-400',
+        'cursor-default',
+        'cursor-not-allowed',
+        'active:scale-100',
+        'button--disabled',
+      ],
+      default: ['bg-gray-100', 'border-gray-500', 'text-gray-600'],
+      primary: [
+        'bg-blue-500',
+        'border-blue-500',
+        'text-white',
+        'hover:bg-blue-400',
+        'hover:border-blue-400',
+        'button--primary',
+      ],
+      secondary: [
+        'bg-white',
+        'border-blue-500',
+        'text-blue-500',
+        'hover:text-blue-600',
+        'hover:border-blue-600',
+        'hover:shadow-lg',
+        'button--secondary',
+      ],
+      cancel: ['bg-white', 'border-white', 'text-blue-500', 'button--cancel'],
+    },
+  }),
+  computed: {
+    variationClasses() {
+      if (this.disabled) return this.buttonVariationClasses.disabled
+      return this.buttonVariationClasses[this.variation]
+    },
+    blockClasses() {
+      if (this.block) return ['flex', 'justify-center', 'w-full']
+      return ['inline-flex']
+    },
+  },
 }
 </script>

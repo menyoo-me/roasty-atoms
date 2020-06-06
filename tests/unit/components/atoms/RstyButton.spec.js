@@ -78,6 +78,8 @@ describe('RstyButton.vue', () => {
 
     expect(wrapper.element.tagName).toBe('BUTTON')
     expect(wrapper.attributes('type')).toBe('button')
+    expect(wrapper.classes()).toContain('button')
+    expect(wrapper.classes()).toContain('button--disabled')
     expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
