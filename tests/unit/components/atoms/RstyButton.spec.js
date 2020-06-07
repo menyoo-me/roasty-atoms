@@ -10,11 +10,6 @@ const factory = createFactory(({ props, options }) => {
 })
 
 describe('RstyButton.vue', () => {
-  it('toMatchSnapshot', async () => {
-    const wrapper = factory()
-    expect(wrapper).toMatchSnapshot()
-  })
-
   it('has default structure and classes', async () => {
     const wrapper = factory()
 
@@ -27,7 +22,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('aria-pressed')).not.toBeDefined()
     expect(wrapper.attributes('autocomplete')).not.toBeDefined()
     expect(wrapper.attributes('tabindex')).not.toBeDefined()
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
@@ -47,7 +41,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('aria-pressed')).not.toBeDefined()
     expect(wrapper.attributes('autocomplete')).not.toBeDefined()
     expect(wrapper.attributes('tabindex')).not.toBeDefined()
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
@@ -65,7 +58,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('type')).toBe('button')
     expect(wrapper.find('span').exists()).toBe(true)
     expect(wrapper.text()).toBe('foobar')
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
@@ -80,7 +72,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.attributes('type')).toBe('button')
     expect(wrapper.classes()).toContain('button')
     expect(wrapper.classes()).toContain('button--disabled')
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
@@ -94,7 +85,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.element.tagName).toBe('A')
     expect(wrapper.classes()).not.toContain('disabled')
     expect(wrapper.attributes('role')).toEqual('button')
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
@@ -108,7 +98,6 @@ describe('RstyButton.vue', () => {
     expect(wrapper.classes()).not.toContain('disabled')
     expect(wrapper.attributes('role')).toEqual('button')
     expect(wrapper.attributes('href')).toEqual('#')
-    expect(wrapper).toMatchSnapshot()
 
     wrapper.destroy()
   })
