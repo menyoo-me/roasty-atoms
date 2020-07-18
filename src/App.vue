@@ -1,21 +1,41 @@
 <template>
   <div id="app">
     <h2>Buttons</h2>
-    <div class="w-full p-2 bg-gray-100">
-      <rsty-button variation="primary">Roasty Button</rsty-button>
-    </div>
-    <div class="w-full p-2 bg-gray-100">
-      <rsty-button variation="secondary">Roasty Button</rsty-button>
-    </div>
-    <div class="w-full p-2 bg-gray-400">
-      <rsty-button variation="cancel">Roasty Button</rsty-button>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" variation="primary">Primary Button</rsty-button>
+      <rsty-button class="mr-3" variation="primary" :ghost="true">Primary Ghost</rsty-button>
     </div>
     <div class="w-full p-2">
-      <rsty-button :disabled="true">Roasty Button</rsty-button>
+      <rsty-button class="mr-3" size="small">Small Button</rsty-button>
+      <rsty-button class="mr-3" size="medium">Medium Button</rsty-button>
+      <rsty-button class="mr-3" size="large">Large Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3">Default Button</rsty-button>
+      <rsty-button class="mr-3" :ghost="true">Default Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" variation="red">Red Button</rsty-button>
+      <rsty-button class="mr-3" variation="red" :ghost="true">Red Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" variation="green">Green Button</rsty-button>
+      <rsty-button class="mr-3" variation="green" :ghost="true">Green Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" variation="blue">Blue Button</rsty-button>
+      <rsty-button class="mr-3" variation="blue" :ghost="true">Blue Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" :disabled="true">Disabled Button</rsty-button>
+      <rsty-button class="mr-3" :disabled="true">Disabled Button</rsty-button>
+    </div>
+    <div class="w-full p-2">
+      <rsty-button class="mr-3" size="large" :block="true">Block Button</rsty-button>
     </div>
 
-    <div>
-      <h2>Headings</h2>
+    <div class="mt-20">
+      <h2 class="uppercase font-thin text-2xl">Headings</h2>
       <div class="w-full p-2">
         <rsty-heading>The quick brown fox jumps over the lazy dog</rsty-heading>
         <rsty-heading tag="h2">The quick brown fox jumps over the lazy dog</rsty-heading>
