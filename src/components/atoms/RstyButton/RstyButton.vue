@@ -187,6 +187,9 @@ export default {
           'hover:text-white',
         ],
       },
+      link: {
+        default: ['text-blue-600', 'hover:underline'],
+      },
     },
   }),
   computed: {
