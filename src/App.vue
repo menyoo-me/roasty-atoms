@@ -33,6 +33,9 @@
     <div class="w-full p-2">
       <rsty-button class="mr-3" size="large" :block="true">Block Button</rsty-button>
     </div>
+    <div class="w-full p-2">
+      <rsty-button variation="link" href="https://menyoo.me">Link</rsty-button>
+    </div>
 
     <div class="mt-20">
       <h2 class="uppercase font-thin text-2xl">Headings</h2>
